@@ -1,3 +1,40 @@
 Exercise
 
-Load the insurance.csv in a DataFrame using pandas. Explore the dataset using functions like to_string(), columns, index, dtypes, shape, info() and describe(). Use this DataFrame for the following exercises.
+1. Load the insurance.csv in a DataFrame using pandas. Explore the dataset using functions like to_string(), columns, index, dtypes, shape, info() and describe(). Use this DataFrame for the following exercises.
+
+#1
+import pandas as pd
+#creating a Dataframe from Files
+insurance_df = pd.read_csv (filepath_or_buffer= 'insurance.csv',
+                            sep=',',
+                            header=0)
+
+print(insurance_df)
+
+#print(insurance_df.index)
+print(insurance_df.columns)
+print()
+print(insurance_df.index)
+print()
+print(insurance_df.dtypes)
+print()
+print(insurance_df.shape)
+print()
+print(insurance_df.info)
+print()
+print(insurance_df.describe())
+print()
+print(insurance_df.to_string())
+
+
+2. Print only the column age
+print(insurance_df['age'])
+
+3.Print only the columns age,children and charges
+print(insurance_df[['age', 'children', 'charges']])
+
+4.Print only the first 5 lines and only the columns age,children and charges
+print(insurance_df[['age', 'children', 'charges']].head(5))
+
+5.What is the average, minimum and maximum charges ?
+
