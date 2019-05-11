@@ -1,0 +1,3 @@
+Exercise
+
+Load the insurance.csv in a DataFrame using pandas. Explore the dataset using functions like to_string(), columns, index, dtypes, shape, info() and describe(). Use this DataFrame for the following exercises.
