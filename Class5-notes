@@ -1,6 +1,114 @@
 
 Python Functions, Libraries & Numerical Analysis
+Use command p to auto populate the dommand in pycharm if you are not sure
 
-Kubernetes is the future of Docker which allwas for ochestration.
+Kubernetes is the future of Docker which allows for ochestration.
 
+
+Importing librairies:
+
+import sound.effects.echo
+import sound.effects.surround
+from sound.effects import *
+
+to check which which libriries are installed by default check this link on the python standard library
+https://docs.python.org/3/library/
+
+apt get install pandas or better yet
+pip3 install pandas
+
+because we don't have admin rights on the machine use
+
+pip3 install matplotlib --user
+pip3 install pandas --user
+pip3 install numpy --user
+
+Exercise 2
+
+Write a python script that makes tests one functionality of each of the following imported libs: time, random, os
+
+import time
+print('before sleep')
+time.sleep(3)
+print('after sleep')
+
+
+import random
+print(random.randint(3, 10))
+
+import os
+print(os.path.isfile('./data/titanic.zip'))
+
+
+
+Exercise 2
+
+1. Create your first array with the elements [1,22.4,5,35,4,6.7,3,8,40] and print it. Experiment what the following functions do: ndim, shape, size and dtype.
+
+import numpy as np
+
+myarray=np.array([1,22.4,5,35,4,6.7,3,8,40])
+
+print(myarray.ndim)
+print(myarray.shape)
+print(myarray.size)
+print(myarray.dtype)
+
+2. Create your first matrix with the elements [['a', 'b'],['c', 'd'],[3, 3]] and print it. Experiment what the following functions do: ndim, shape, size and dtype
+
+import numpy as np
+
+myarray=np.array([['a', 'b'],
+                  ['c', 'd'],[
+                      3, 3]])
+print(myarray.ndim)
+print(myarray.shape)
+print(myarray.size)
+print(myarray.dtype)
+
+3. Create numpy 1 dimension array using each of the functions arange, linspace and rand
+
+import numpy as np
+
+
+print(np.arange(15,30))
+print()
+print(np.linspace(0, 10, 20))
+print()
+print(np.random.rand(10))
+
+4.Create numpy 2 dimensions matrix using each of the functions zeros, ones, eye and rand
+
+import numpy as np
+
+print(np.zeros((3, 2)))
+print()
+print(np.ones((4, 4)))
+print()
+print(np.eye(5))
+print()
+print(np.random.rand(3, 3))
+
+5.Create an array containing 20 times the value 7. Reshape it to a 4 x 5 Matrix
+
+import numpy as np
+#in mattix format
+array_of_sevens = np.ones(20) *7
+print(array_of_sevens.reshape(4, 5))
+
+#to have them in one line
+print()
+array_of_sevens = np.ones(20) *7
+reshaped_array_of_sevens = array_of_sevens.reshape(4, 5)
+print(reshaped_array_of_sevens[3:4])
+
+
+6. Create a matrix of 6 x 6 containing random values between 0 and 1, then print:
+only the first element on it
+only the first 2 rows for it
+only the last 2 rows for it
+only the mid 2 rows for it
+only the last column for it
+only the two mid columns and 2 mid rows for it
+the sum, average, max and min values for each feature(column)
 
